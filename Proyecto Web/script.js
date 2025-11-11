@@ -1,8 +1,8 @@
 // si el usuario es admin, se aplican los colores correspondientes
 window.addEventListener("DOMContentLoaded", () => {
     const botonSesion = document.querySelector("#boton-sesion");
-    const tema = localStorage.getItem("tema");
-    const sesionIniciada = localStorage.getItem("sesionIniciada");
+    const tema = sessionStorage.getItem("tema");
+    const sesionIniciada = sessionStorage.getItem("sesionIniciada");
 
     // se verifica si el tema guardado es "admin"
     if (tema === "admin") {
@@ -24,8 +24,8 @@ window.addEventListener("DOMContentLoaded", () => {
         botonSesion.addEventListener("click", () => {
             if (sesionIniciada === "true") {
                 // Cerrar sesión
-                localStorage.removeItem("tema");
-                localStorage.removeItem("sesionIniciada");
+                sessionStorage.removeItem("tema");
+                sessionStorage.removeItem("sesionIniciada");
             }
         });
     }  

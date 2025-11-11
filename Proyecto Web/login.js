@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (usuario === "admin" && password === "1234") {
             sessionStorage.setItem("usuario", usuario);
             window.location.href = "index.html";
+
+            sessionStorage.setItem("tema", "admin");
+            sessionStorage.setItem("sesionIniciada", "true");
         } else {
             errorMsg.textContent = "Usuario o contraseña incorrectos";
         }

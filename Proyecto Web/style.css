@@ -88,6 +88,10 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
+.tema-admin nav a:hover {
+    color: var(--color-secundario);
+}
+
 /* ================================
    CONTENEDOR PRINCIPAL
 =================================*/
@@ -150,9 +154,17 @@ button {
     transition: background 0.3s ease, transform 0.2s;
 }
 
+.tema-admin button {
+    background: var(--color-secundario);
+}
+
 button:hover {
     background: #cf6d17;
     transform: scale(1.03);
+}
+
+.tema-admin button:hover {
+    background: #1e3f7a;
 }
 
 /* ================================
@@ -239,6 +251,10 @@ th {
     letter-spacing: 0.5px;
 }
 
+.tema-admin th {
+    background: var(--color-secundario);
+}
+
 tr:nth-child(even) {
     background: var(--color-claro);
 }
@@ -246,6 +262,10 @@ tr:nth-child(even) {
 tr:hover {
     background: rgba(230,126,34,0.1);
     transition: 0.2s;
+}
+
+.tema-admin tr:hover {
+    background: rgba(35,77,161,0.1);
 }
 
 /* ================================
@@ -270,6 +290,11 @@ main {
     text-align: center;
     margin-bottom: 20px;
     color: var(--color-principal);
+}
+
+.tema-admin .ingreso-container h2,
+.tema-admin .clientes-container h2 {
+    color: var(--color-secundario);
 }
 
 /* ================================

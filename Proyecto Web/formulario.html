@@ -12,11 +12,23 @@
       <h1>MIAUtomotriz</h1>
       <nav>
         <ul>
-          <li><a href="dashboard.html">Inicio</a></li>
+          <li><a href="index.html">Inicio</a></li>
           <li><a href="formulario.html">Nuevo Vehículo</a></li>
           <li><a href="clientes.html">Clientes</a></li>
-          <li><a href="login.html" id="boton-sesion">Iniciar Sesión</a></li>
+          <li><a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>
         </ul>
+<script>
+  // Protección: si no hay sesión, redirige al login
+  if (!sessionStorage.getItem("usuario")) {
+    window.location.href = "login.html";
+  }
+
+  // Cerrar sesión limpiando sessionStorage
+  function cerrarSesion() {
+    sessionStorage.clear();
+    window.location.href = "login.html";
+  }
+</script>
       </nav>
     </header>
     <main class="ingreso-container">

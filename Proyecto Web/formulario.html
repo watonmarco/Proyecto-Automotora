@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Formulario - MIAUtomotriz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>MIAUtomotriz</h1>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">Inicio</a></li>
+          <li><a href="formulario.html">Nuevo Vehículo</a></li>
+          <li><a href="clientes.html">Clientes</a></li>
+          <li><a href="login.html" id="boton-sesion">Iniciar Sesión</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="ingreso-container">
+      <h2>Registro de Vehículo</h2>
+      <form action="" id="formulario-ingreso">
+        <label>Patente:</label>
+        <input type="text" name="patente" maxlength="7" required placeholder="ABCD-12" pattern="[A-Za-z]{4}-[0-9]{2}">
+        <label>Nombre Cliente:</label>
+        <input type="text" name="nombre-cliente" maxlength="40" required placeholder="Nombre Cliente" pattern="[A-Za-zÀ-ÿ\s]{3,50}">
+        <label>RUT Cliente:</label>
+        <input type="text" name="rut-cliente" maxlength="10" required placeholder="1234567-0" pattern="[0-9]{7,8}-[Kk0-9]">
+        <label>Tipo de Vehículo:</label>
+        <select required name="tipo-vehiculo">
+          <option value="">Seleccione tipo</option>
+          <option>Auto</option>
+          <option>Camioneta</option>
+          <option>SUV</option>
+          <option>Sedán</option>
+          <option>Hatchback</option>
+        </select>
+        <label>Marca:</label>
+        <select required name="marca-vehiculo">
+          <option value="">Seleccione marca</option>
+          <option>Toyota</option>
+          <option>Ford</option>
+          <option>Chevrolet</option>
+          <option>Honda</option>
+          <option>Nissan</option>
+          <option>BMW</option>
+          <option>Volkswagen</option>
+          <option>Mitsubishi</option>
+        </select>
+        <label>Modelo:</label>
+        <select required name="modelo-vehiculo">
+          <option value="">Seleccione modelo</option>
+          <option>Corolla</option>
+          <option>Frontier</option>
+          <option>Golf</option>
+          <option>Ranger</option>
+          <option>Outlander</option>
+        </select>
+        <label>Descripción:</label>
+        <textarea required name="descripcion" placeholder="Describa su problema"></textarea>
+        <button type="submit">Guardar</button>
+      </form>
+    </main>
+    <footer>
+      <p>&copy; 2025 MIAUtomotriz</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</body>
+</html>
